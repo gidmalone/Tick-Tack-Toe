@@ -22,6 +22,9 @@ def is_winner(board):
             if(c == 2):
                 if(board[r][c] == board[r][c-1] and board[r][c-1] == board[r][c-2] and board[r][c] != 0):
                     return board[r][c]
+            if(r == 2 and c == 2):
+                if(board[r][c] == board[r-1][c-1] and board[r-1][c-1] == board[r-2][c-2] and board[r][c] != 0):
+                    return board[r][c]
     return -1
 
 winner = -1
